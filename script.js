@@ -38,6 +38,11 @@ let newGrid = (rows=3, cols=3) => {
         new_child.addEventListener("click", (e) => {
             e.target.classList.toggle("lit")
         });
+
+        new_child.addEventListener("dragenter", (e) => {
+            e.target.classList.toggle("lit")
+        });
+
         new_grid.appendChild(new_child);   
     }
 
@@ -57,16 +62,18 @@ let addGrid = () => {
     grid_container.appendChild(newGrid(parseInt(row_len), parseInt(col_len)));
 }
 
-let lightEmUp = () => {
-    document.getElementById("g1").classList.toggle('lit');
-    document.getElementById("g2").classList.toggle('lit');
-    document.getElementById("g3").classList.toggle('lit');
-    document.getElementById("g4").classList.toggle('lit');
-    document.getElementById("g5").classList.toggle('lit');
+// let lightEmUp = () => {
+//     document.getElementById("g1").classList.toggle('lit');
+//     document.getElementById("g2").classList.toggle('lit');
+//     document.getElementById("g3").classList.toggle('lit');
+//     document.getElementById("g4").classList.toggle('lit');
+//     document.getElementById("g5").classList.toggle('lit');
+// }
+
+
+let reset = () => {
+    // Delete Previous Grid
+    while (grid_container.firstChild) {
+        grid_container.firstChild.remove()
+    }
 }
-
-
-
-
-
-
