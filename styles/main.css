@@ -1,0 +1,126 @@
+:root {
+    --main-clr: white;
+    --bkg-clr: black;
+
+    --max-width: 1140px;
+
+    --header-h: 96px;
+    --footer-h: 96px;
+
+    --content-height: calc(100vh - 192px): 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+
+    background: cornflowerblue;
+    
+}
+
+
+.main-container {
+    width: 100%;
+    max-height: var(--content-height);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    /* justify-content: center; */
+
+    background: yellowgreen;
+
+}
+
+#control-section {
+    padding: 2rem 0rem;
+
+    width: 100%;
+    height: 320px;
+
+    display: flex;
+/*  align-items: center; */
+    justify-content: space-evenly;
+}
+
+#controls {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: end; */
+    gap: 1rem;
+}
+
+#controls > input {
+    text-align: center;
+    padding: .5rem .5rem;
+}
+
+#controls > button {
+    padding: .5rem .75rem;
+}
+
+.neon-display {
+    /* background: rgb(16, 23, 37); */
+    margin: 1rem;
+    padding: 2px;
+
+    display: grid;
+    place-items: center;
+
+/*  grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto); */
+
+    gap: 2px;
+
+    /* border: 2px solid gold; */
+}
+
+.neon-item {
+    width: 25px;
+    height: 25px;
+
+    box-shadow: inset 0px 0px 3px rgb(63, 62, 1)
+    ;
+    /* border: 1px inset gray; */
+    background: yellow;
+
+    /* border: 1px solid purple; */
+    border-radius: 2px;
+}
+
+/* Hover or Active State */
+/* .neon-item:hover {
+    background: crimson;
+
+    transform: scale(1.1);
+
+    box-shadow: 
+        inset 0px 0px 3px rgb(63, 62, 1),
+        0px 0px 1px rgba(99, 99, 99, 0.4),
+        0px 0px 2px rgba(99, 99, 99, 0.4),
+        0px 0px 4px rgba(99, 99, 99, 0.4),
+        0px 0px 8px rgba(99, 99, 99, 0.4);
+} */
+
+.lit {
+    background: crimson;
+
+    transform: scale(1.1);
+
+    box-shadow: 
+        inset 0px 0px 3px rgb(63, 62, 1),
+        0px 0px 1px rgba(99, 99, 99, 0.4),
+        0px 0px 2px rgba(99, 99, 99, 0.4),
+        0px 0px 4px rgba(99, 99, 99, 0.4),
+        0px 0px 8px rgba(99, 99, 99, 0.4);
+}
+
