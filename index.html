@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/main.css" />
 
-    <title>Neon Pixel</title>
-</head>
-<body>
-    <header>HEADER</header>
-    <main>
-        <div class="main-container">
-            <section id="control-section">
-                <fieldset id="controls">
-                    <legend>Controls</legend>
-                    <input type="number" name="row" id="row-num">
-                    <input type="number" name="col" id="col-num">
-                    <button id="add" type="button" onclick="addGrid()">Add Grid</button>
-                    <button id="light" type="button" onclick="reset()">Erase Grid</button>
-                </fieldset>
-            </section>
-            <section id="display">
-                <!-- <div class="neon-display">
+        <title>Neon Pixel</title>
+    </head>
+    <body>
+        <header>HEADER</header>
+        <main>
+            <div class="main-container">
+                <section id="control-section">
+                    <fieldset id="controls">
+                        <legend>Controls</legend>
+                        <input
+                            type="number"
+                            name="row"
+                            id="row-num"
+                            placeholder="# of rows"
+                        />
+                        <input
+                            type="number"
+                            name="col"
+                            id="col-num"
+                            placeholder="# of cols"
+                        />
+                        <input type="color" name="color" id="clr" />
+                        <button id="add" type="button" onclick="addGrid()">
+                            Add Grid
+                        </button>
+                        <button id="light" type="button" onclick="reset()">
+                            Erase Grid
+                        </button>
+                    </fieldset>
+                </section>
+                <section id="display">
+                    <!-- <div class="neon-display">
                     <div class="g1 neon-item"></div>
                     <div class="g2 neon-item"></div>
                     <div class="g3 neon-item"></div>
@@ -34,11 +49,11 @@
                     <div class="g8 neon-item"></div>
                     <div class="g9 neon-item"></div>
                 </div> -->
-            </section>
-        </div>
-    </main>
-    <footer>FOOTER</footer>
+                </section>
+            </div>
+        </main>
+        <footer>FOOTER</footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="grid_api.js"></script>
+    </body>
 </html>

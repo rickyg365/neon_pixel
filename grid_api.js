@@ -8,12 +8,14 @@ let newPixel = (custom_id = "") => {
 
     new_pixel.classList.add("neon-item");
     new_pixel.setAttribute("id", `${custom_id}`);
+
     return new_pixel;
 };
 
 // generate dynamic grid display
 let newGrid = (rows = 3, cols = 3) => {
     let new_grid = document.createElement("div");
+
     new_grid.classList.add("neon-display");
     new_grid.setAttribute(
         "style",
@@ -26,27 +28,26 @@ let newGrid = (rows = 3, cols = 3) => {
 
     let total_children = rows * cols;
     let new_child;
-
-    // Dont need 2d for loop because we just need to make that many divs
-    // let child_index=0;
-    // for (let i = 1; i <= rows; i++) {
-    //     for (let j = 1; j <= cols; j++) {
-    //         child_index++;
-    //         let new_child = newPixel(`g${i}`);
-    //         new_grid.appendChild(new_child);
-    //     }
-    // }
+    let row_ind = 1;
+    let col_ind = 1;
 
     for (let i = 1; i <= total_children; i++) {
-        new_child = newPixel(`g${i}`);
+        col_ind = i % col_ind;
+
+        if (i > col_ind) {
+            col_ind = i % col_ind;
+            row_ind += 1;
+        }
+        new_child = newPixel(`g${row_ind}${col_ind}`);
+
         new_child.addEventListener("click", (e) => {
             e.target.classList.toggle("lit");
         });
-
         new_child.addEventListener("dragenter", (e) => {
             e.target.classList.toggle("lit");
         });
 
+        col_ind += 1;
         new_grid.appendChild(new_child);
     }
 
